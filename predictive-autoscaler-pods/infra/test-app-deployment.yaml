@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-flask
+  namespace: predictive
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-flask
+  template:
+    metadata:
+      labels:
+        app: test-flask
+    spec:
+      containers:
+        - name: test-flask
+          image: <your-ecr>/predictive-flask-app:latest
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-flask
+  namespace: predictive
+spec:
+  selector:
+    app: test-flask
+  ports:
+    - port: 5000
+      targetPort: 5000

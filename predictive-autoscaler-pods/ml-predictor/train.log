@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/moham/OneDrive/Desktop/predictive-autoscaler-pods/ml-predictor/train_model.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

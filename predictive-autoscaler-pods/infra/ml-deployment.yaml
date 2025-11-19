@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-predictor
+  namespace: predictive
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ml-predictor
+  template:
+    metadata:
+      labels:
+        app: ml-predictor
+    spec:
+      containers:
+        - name: ml-predictor
+          image: <your-ecr>/predictive-ml-predictor:latest
+          ports:
+            - containerPort: 5001

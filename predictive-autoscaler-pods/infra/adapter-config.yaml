@@ -1,0 +1,10 @@
+rules:
+  - seriesQuery: 'predicted_replicas'
+    resources:
+      overrides:
+        namespace: {resource: "namespace"}
+        pod: {resource: "pod"}
+    name:
+      matches: "predicted_replicas"
+      as: "predicted_replicas"
+    metricsQuery: 'predicted_replicas{<<.LabelMatchers>>}'

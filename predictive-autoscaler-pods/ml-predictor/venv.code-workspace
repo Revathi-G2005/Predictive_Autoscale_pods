@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../venv"
+		},
+		{
+			"path": "../.vscode"
+		},
+		{
+			"path": "../infra"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../.venv"
+		}
+	]
+}
